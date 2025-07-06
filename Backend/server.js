@@ -15,9 +15,8 @@ const io = socketIo(server, {
   cors: {
     origin: (origin, callback) => {
       const allowedOrigins = [
-        "https://super-admin-sage-two.vercel.app",
+        "https://super-admins.netlify.app",
         "http://localhost:3000",
-        "https://super-admin-ga55.onrender.com",
       ];
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
