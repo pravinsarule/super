@@ -9,7 +9,7 @@ export const DashboardCards = () => {
   const fetchAdminCount = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("https://super-admin-ga55.onrender.com/api/auth/getAllAdmins", {
+      const response = await fetch("https://super-gkcn.onrender.com/api/auth/getAllAdmins", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,

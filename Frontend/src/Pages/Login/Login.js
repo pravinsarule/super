@@ -137,7 +137,7 @@ export const Login = () => {
     }
 
     try {
-      const res = await axios.post("https://super-admin-hg1i.onrender.com/api/auth/login", {
+      const res = await axios.post("https://super-gkcn.onrender.com/api/auth/login", {
         email,
         password,
       });

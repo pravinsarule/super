@@ -5,7 +5,7 @@ import { Sidebar } from "../Dashboard/Sidebar";
 import { Header } from "../Dashboard/Header";
 import io from "socket.io-client";
 
-const socket = io("https://super-admin-ga55.onrender.com", {
+const socket = io("https://super-gkcn.onrender.com", {
   auth: {
     token: localStorage.getItem("token"),
   },
@@ -20,7 +20,7 @@ export const Vendor = () => {
   const fetchVendors = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("https://super-admin-ga55.onrender.com/api/auth/vendors/getVendors", {
+      const response = await fetch("https://super-gkcn.onrender.com/api/auth/vendors/getVendors", {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -94,7 +94,7 @@ export const Vendor = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`https://super-admin-ga55.onrender.com/api/auth/vendors/approveDeactivation/${id}`, {
+      const response = await fetch(`https://super-gkcn.onrender.com/api/auth/vendors/approveDeactivation/${id}`, {
         method: "PUT",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -139,7 +139,7 @@ export const Vendor = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`https://super-admin-ga55.onrender.com/api/auth/vendors/reject-deactivation/${id}`, {
+      const response = await fetch(`https://super-gkcn.onrender.com/api/auth/vendors/reject-deactivation/${id}`, {
         method: "PUT",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -184,7 +184,7 @@ export const Vendor = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`https://super-admin-ga55.onrender.com/api/auth/vendors/approve-reactivation/${id}`, {
+      const response = await fetch(`https://super-gkcn.onrender.com/api/auth/vendors/approve-reactivation/${id}`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -229,7 +229,7 @@ export const Vendor = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`https://super-admin-ga55.onrender.com/api/auth/vendors/reject-reactivation/${id}`, {
+      const response = await fetch(`https://super-gkcn.onrender.com/api/auth/vendors/reject-reactivation/${id}`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
       });

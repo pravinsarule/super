@@ -41,7 +41,7 @@ export const Header = ({ isSidebarOpen, setIsSidebarOpen }) => {
         return;
       }
 
-      const res = await fetch("https://super-admin-ga55.onrender.com/api/auth/logout", {
+      const res = await fetch("https://super-gkcn.onrender.com/api/auth/logout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -7,7 +7,7 @@ import { Pencil, Trash2, Eye, EyeOff } from "lucide-react";
 import io from "socket.io-client";
 
 // Initialize Socket.IO client
-const socket = io("https://super-admin-ga55.onrender.com", {
+const socket = io("https://super-gkcn.onrender.com", {
   auth: {
     token: localStorage.getItem("token"),
   },
@@ -29,7 +29,7 @@ export const User = () => {
   const fetchAdmins = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("https://super-admin-ga55.onrender.com/api/auth/getAllAdmins", {
+      const response = await fetch("https://super-gkcn.onrender.com/api/auth/getAllAdmins", {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -151,8 +151,8 @@ export const User = () => {
     try {
       const token = localStorage.getItem("token");
       const url = editingUserId
-        ? `https://super-admin-ga55.onrender.com/api/auth/update-admin/${editingUserId}`
-        : "https://super-admin-ga55.onrender.com/api/auth/addRoleBasedAdmin";
+        ? `https://super-gkcn.onrender.com/api/auth/update-admin/${editingUserId}`
+        : "https://super-gkcn.onrender.com/api/auth/addRoleBasedAdmin";
 
       const method = editingUserId ? "PUT" : "POST";
       const requestData = { ...formData };
@@ -225,7 +225,7 @@ export const User = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`https://super-admin-ga55.onrender.com/api/auth/delete-admin/${id}`, {
+      const response = await fetch(`https://super-gkcn.onrender.com/api/auth/delete-admin/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
